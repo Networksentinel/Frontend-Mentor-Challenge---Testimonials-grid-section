@@ -1,4 +1,4 @@
-//---------------GLOBAL TYPOGHRAPHY
+//---------------GLOBAL TYPOGRAPHY
 
 //FAMILY
 $font-primary: "Barlow Semi Condensed", sans-serif;
@@ -18,4 +18,61 @@ $line-height-md: 1.2;   //120%
 $line-height-sm: 1.1;   //110%
 
 //LETTER-SPACING
-$Letter-spacing-default: 0;
+$letter-spacing-default: 0;
+
+//---------------MIXINS
+@mixin text-preset-1(
+    $font:    $font-primary,
+    $weight:  $semibold,
+    $size:    $font-size-lg,
+    $height:  $line-height-md,
+    $spacing: $letter-spacing-default
+) {
+    font-family:    $font;
+    font-weight:    $weight;
+    font-size:      $size;
+    line-height:    $height;
+    letter-spacing: $spacing;
+}
+
+@mixin text-preset-2(
+    $font:    $font-primary,
+    $weight:  $medium,
+    $size:    $font-size-md,
+    $height:  $line-height-sm,
+    $spacing: $letter-spacing-default
+) {
+    font-family:    $font;
+    font-weight:    $weight;
+    font-size:      $size;
+    line-height:    $height;
+    letter-spacing: $spacing;
+}
+
+@mixin text-preset-3(
+    $font:    $font-primary,
+    $weight:  $medium,
+    $size:    $font-size-md,
+    $height:  $line-height-lg,
+    $spacing: $letter-spacing-default
+) {
+    font-family:    $font;
+    font-weight:    $weight;
+    font-size:      $size;
+    line-height:    $height;
+    letter-spacing: $spacing;
+}
+
+@mixin text-preset-4(
+    $font:    $font-primary,
+    $weight:  $medium,
+    $size:    $font-size-sm,
+    $height:  $line-height-sm,
+    $spacing: $letter-spacing-default
+) {
+    font-family:    $font;
+    font-weight:    $weight;
+    font-size:      $size;
+    line-height:    $height;
+    letter-spacing: $spacing;
+}
