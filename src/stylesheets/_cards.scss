@@ -1,1 +1,10 @@
 @use './design' as *;
+
+.feature__card {
+    border-radius: $space-sm;
+    padding: $space-xl;
+
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+}
