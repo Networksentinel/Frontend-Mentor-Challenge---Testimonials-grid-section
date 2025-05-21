@@ -1,1 +1,9 @@
 @use './design' as *;
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    padding: 4.5625rem 2.1875rem;
+}
