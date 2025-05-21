@@ -1,1 +1,7 @@
 @use './design' as *;
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+}
