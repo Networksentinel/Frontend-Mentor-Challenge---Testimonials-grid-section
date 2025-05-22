@@ -7,6 +7,8 @@
     gap: $space-xl;
 
     @media (min-width: $breakpoint-tablet) {
+        width: clamp(647px, 81.3333vw, 770px);
+
         display: grid;
         grid-template-areas: 
         "top top"
