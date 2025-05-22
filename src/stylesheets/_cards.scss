@@ -10,6 +10,10 @@
         flex-direction: column;
         gap: $space-md;
 
+        box-shadow: 40px 60px 50px -47px rgba(72,85,106,0.24);
+        -webkit-box-shadow: 40px 60px 50px -47px rgba(72,85,106,0.24);
+        -moz-box-shadow: 40px 60px 50px -47px rgba(72,85,106,0.24);
+
         h2 {
             @include text-preset-1;
         }
