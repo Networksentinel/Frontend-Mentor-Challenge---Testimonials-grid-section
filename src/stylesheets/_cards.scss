@@ -1,79 +1,75 @@
 @use './design' as *;
 
 //DEFAULT CARD STYLE
-.feature {
-    &__card {
-        border-radius: $space-sm;
-        padding: $space-xl;
+.feature__card {
+    border-radius: $space-sm;
+    padding: $space-xl;
 
-        display: flex;
-        flex-direction: column;
-        gap: $space-md;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
 
-        box-shadow: 40px 60px 50px -47px #48556a3d;
-        -webkit-box-shadow: 40px 60px 50px -47px #48556a3d;
-        -moz-box-shadow: 40px 60px 50px -47px #48556a3d;
+    box-shadow: 40px 60px 50px -47px #48556a3d;
+    -webkit-box-shadow: 40px 60px 50px -47px #48556a3d;
+    -moz-box-shadow: 40px 60px 50px -47px #48556a3d;
 
-        h2 {
-            @include text-preset-1;
-        }
-        h3 {
-            @include text-preset-2;
-        }
-        h4 {
-            @include text-preset-4;
-        }
-        p {
-            @include text-preset-3;
-        }
-}   
+    h2 {
+        @include text-preset-1;
+    }
+    h3 {
+        @include text-preset-2;
+    }
+    h4 {
+        @include text-preset-4;
+    }
+    p {
+        @include text-preset-3;
+    }
 }
 
 //INDIVIDUAL CARD STYLES
-.feature {
-    &__card {
-        &--daniel {
-            background-color: $color-8;
-            h4, p{
-                color: $color-10;
-            }
+.feature__card {
+    &--daniel {
+        background-color: $color-8;
+        h4, p{
+            color: $color-10;
         }
+    }
 
-        &--jonathan{
-            background-color: $color-4;
-            h4, p{
-                color: $color-7;
-            }
+    &--jonathan{
+        background-color: $color-4;
+        h4, p{
+            color: $color-7;
         }
+    }
 
-        &--jeanette {
-            background-color: $color-1;
-            h2, h3{
-                color: $color-4;
-            }
-            h4, p{
-                color: $color-5;
-            }
+    &--jeanette {
+        background-color: $color-1;
+        h2, h3{
+            color: $color-4;
         }
-
-        &--patrick {
-            background-color: $color-3;
-            h2{
-                color: $color-6;
-            }
-            p{
-                color: $color-7;
-            }
+        h4, p{
+            color: $color-5;
         }
+    }
 
-        &--kira {
-            background-color: $color-1;
-            h2, h3{
-                color: $color-4;
-            }
-            h4, p{
-                color: $color-5;
-            }
+    &--patrick {
+        background-color: $color-3;
+        h2{
+            color: $color-6;
+        }
+        p{
+            color: $color-7;
+        }
+    }
+
+    &--kira {
+        background-color: $color-1;
+        h2, h3{
+            color: $color-4;
+        }
+        h4, p{
+            color: $color-5;
         }
     }
 }
