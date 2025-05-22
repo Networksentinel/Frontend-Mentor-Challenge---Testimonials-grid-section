@@ -19,8 +19,8 @@
     }
     @media (min-width: $breakpoint-desktop) {
         width: clamp(770px, 77.3611vw, 1400px);
-        height: 582px;
 
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         "top-left top-left top-mid right"
         "bottom-left bottom-mid bottom-mid right";
