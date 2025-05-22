@@ -5,4 +5,14 @@
     display: flex;
     flex-direction: column;
     gap: $space-xl;
+
+    @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-template-areas: 
+        "top top"
+        "topmid1 topmid2"
+        "bottmid bottmid"
+        "bottom bottom"
+        ;
+    }
 }
