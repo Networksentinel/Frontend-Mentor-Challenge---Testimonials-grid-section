@@ -34,6 +34,11 @@
         h4, p{
             color: $color-10;
         }
+
+        @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-area: top;
+        }
     }
 
     &--jonathan{
@@ -61,6 +66,11 @@
         p{
             color: $color-7;
         }
+
+        @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-area: bottmid;
+        }
     }
 
     &--kira {
@@ -70,6 +80,11 @@
         }
         h4, p{
             color: $color-5;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-area: bottom;
         }
     }
 }
