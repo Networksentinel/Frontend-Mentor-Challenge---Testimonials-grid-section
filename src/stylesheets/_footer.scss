@@ -1,1 +1,29 @@
 @use './design' as *;
+
+.attribution {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    color: $color-2;
+    padding: $space-sm;
+
+    p {
+        display: flex;
+        gap: $space-xm;
+    }
+    p:nth-child(2) {
+        padding-left: $space-sm;;
+    }
+    a {
+        display: block;
+        color: $color-9;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: $color-8;
+            transform: translateY(-3px);
+        }
+    }
+}
