@@ -77,14 +77,18 @@
 //FEATURE HEADER
 .feature__header {
     display: grid;
+    gap: 0.25rem 1.0625rem;
     grid-template-areas: 
     "left right1"
     "left right2";
+    grid-template-columns: auto 1fr;
 
     &--img {
         width: 28px;
         height: 28px;
         border-radius: 100%;
+
+        grid-area: left;
     }
     &--stroke-patrick {
         box-shadow: 0px 0px 0px 2px $color-8;
