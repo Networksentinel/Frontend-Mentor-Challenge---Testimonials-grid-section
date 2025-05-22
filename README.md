@@ -12,9 +12,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -26,83 +23,73 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./public/images/project-sreenshot.png.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution Link](https://your-solution-url.com)
+- [Live Site Link](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass/SCSS - modular, variables, mixins
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vite](https://vite.dev/) - Build tool
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project was similar to the one I did before, and I used it as a chance to sharpen my CSS Grid skills even more. Along the way, I also picked up a couple of neat tricks.
 
-To see how you can add code snippets, see below:
+1. Grid layout with `grid-template-areas`:
+I used `grid-template-areas` again to set up the layout. This time, I had to tweak the column sizes a bit to get the spacing just right. Playing with the `grid-template-columns` helped me balance how much space each section takes up.
 
+2. Profile pictures with a "fake" border:
+The profile pictures had a border (or stroke), but it wasn’t part of the actual image. I could’ve used `box-sizing: content-box;`, but instead, I went with a little trick: I added a `box-shadow` that mimics a border. It doesn’t mess with the box model and still gives the same look. 😄
+
+**Here’s a code snippet showing both things in action:**
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<header class="feature__header">
+    <img class="feature__header--img feature__header--stroke-daniel" src="/images/image-daniel.jpg"       alt="Profile picture of Daniel">
+    <h3>Daniel Clifford</h3>
+    <h4>Verified Graduate</h4>
+</header>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```scss
+.feature__header {
+    display: grid;
+    gap: 0.25rem 1.0625rem;
+    grid-template-areas: 
+    "left right1"
+    "left right2";
+    grid-template-columns: auto 1fr;
+
+    &--img {
+        width: 28px;
+        height: 28px;
+        border-radius: 100%;
+
+        grid-area: left;
+    }
+    &--stroke-patrick {
+        box-shadow: 0px 0px 0px 2px $color-8;
+        -webkit-box-shadow: 0px 0px 0px 2px $color-8;
+        -moz-box-shadow: 0px 0px 0px 2px $color-8;
+    }
+    &--stroke-daniel {
+        box-shadow: 0px 0px 0px 2px $color-9;
+        -webkit-box-shadow: 0px 0px 0px 2px $color-9;
+        -moz-box-shadow: 0px 0px 0px 2px $color-9;
+    }
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I feel like really getting the hang of Grid will pay off in the long run. I don’t want to go too deep down the rabbit hole since I’m I want to start learning React soon, but I’ll definitely focus on Grid for a few more projects to solidify the basics.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Another thing I’ve noticed is that I’m becoming more aware of what my changes actually affect—whether it’s styling, logic, setup, or visuals in the browser. This awareness helps me stay on top of the project and know exactly where I am in the process. It’s also made my commit messages way more useful and organized. I’ve started using proper labels like `style:`, `chore:`, `fix:`, `feat:`, `refactor:`, and `docs:` more consistently, and I’ll keep working on that as well.
