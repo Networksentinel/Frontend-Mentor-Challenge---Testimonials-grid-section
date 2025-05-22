@@ -1,12 +1,13 @@
 @use './design' as *;
 
 body {
-    min-height: 100vh;
     color: $color-1;
     background-color: $bg-color-primary;
 }
 
 main {
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
 
