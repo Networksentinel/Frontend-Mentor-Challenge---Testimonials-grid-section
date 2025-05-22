@@ -1,8 +1,7 @@
 @use './design' as *;
 
 .feature {
-    width: clamp(260px, 81.3333vw, 485px);
-    max-height: 1967px;
+    width: clamp(260px, 81.3333vw, 485px);  
 
     display: flex;
     flex-direction: column;
@@ -10,7 +9,6 @@
 
     @media (min-width: $breakpoint-tablet) {
         width: clamp(647px, 84.2447vw, 770px);
-        max-height: 1157px;
 
         display: grid;
         grid-template-areas: 
@@ -21,8 +19,7 @@
         ;
     }
     @media (min-width: $breakpoint-desktop) {
-        width: clamp(1114px, 77.3611vw, 1400px);
-        max-height: 582px;
+        width: clamp(1114px, 77.3611vw, 1400px);  
 
         row-gap: $space-lg;
         grid-template-columns: repeat(4, 1fr);
