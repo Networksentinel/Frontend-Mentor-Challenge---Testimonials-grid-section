@@ -9,9 +9,9 @@
     flex-direction: column;
     gap: $space-md;
 
-    box-shadow: 40px 60px 50px -47px #48556a3d;
-    -webkit-box-shadow: 40px 60px 50px -47px #48556a3d;
-    -moz-box-shadow: 40px 60px 50px -47px #48556a3d;
+    box-shadow: 40px 60px 50px 0px #48556a57;
+    -webkit-box-shadow: 40px 60px 50px 0px #48556a57;
+    -moz-box-shadow: 40px 60px 50px 0px #48556a57;
 
     h2 {
         @include text-preset-1;
