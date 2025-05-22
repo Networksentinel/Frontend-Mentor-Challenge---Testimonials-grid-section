@@ -1,6 +1,7 @@
 @use './design' as *;
 
 .feature {
+    width: clamp(260px, 81.3333vw, 485px);
     display: flex;
     flex-direction: column;
     gap: $space-xl;
