@@ -30,22 +30,48 @@
 //INDIVIDUAL CARD STYLES
 .feature__card {
     &--daniel {
+        position: relative;
         background-color: $color-8;
-        h4, p{
+
+        .quotations-img {
+                display: none;
+        }
+        h2 {
+            z-index: 1;
+        } 
+        h4, p {
             color: $color-10;
         }
 
         @media (min-width: $breakpoint-tablet) {
-        grid-area: top;
+            grid-area: top;
+
+            .quotations-img {
+                display: block;
+                position: absolute;
+                z-index: 0;
+
+                top: 0;
+                right: 167px;
+
+                width: 104px;
+                height: 102px;
+            }
         }
         @media (min-width: $breakpoint-desktop) {
-        grid-area: top-left;
+            grid-area: top-left;    
+
+            .quotations-img {
+                top: 0;
+                right: 60px;
+            }
         }
     }
 
     &--jonathan{
         background-color: $color-4;
-        h4, p{
+
+        h4, p {
             color: $color-7;
         }
 
@@ -56,49 +82,52 @@
 
     &--jeanette {
         background-color: $color-1;
-        h2, h3{
+
+        h2, h3 {
             color: $color-4;
         }
-        h4, p{
+        h4, p {
             color: $color-5;
         }
 
         @media (min-width: $breakpoint-desktop) {
-        grid-area: bottom-left;
+            grid-area: bottom-left;
         }
     }
 
     &--patrick {
         background-color: $color-3;
-        h2{
+
+        h2 {
             color: $color-6;
         }
-        p{
+        p {
             color: $color-7;
         }
 
         @media (min-width: $breakpoint-tablet) {
-        grid-area: bottmid;
+            grid-area: bottmid;
         }
         @media (min-width: $breakpoint-desktop) {
-        grid-area: bottom-mid;
+            grid-area: bottom-mid;
         }
     }
 
     &--kira {
         background-color: $color-1;
-        h2, h3{
+
+        h2, h3 {
             color: $color-4;
         }
-        h4, p{
+        h4, p {
             color: $color-5;
         }
 
         @media (min-width: $breakpoint-tablet) {
-        grid-area: bottom;
+            grid-area: bottom;
         }
         @media (min-width: $breakpoint-desktop) {
-        grid-area: right;
+            grid-area: right;
         }
     }
 }
